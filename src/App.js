@@ -4,7 +4,8 @@ import './App.css';
 import TiledLines from './Components/TiledLines';
 import JoyDivision from './Components/JoyDivision';
 import CubicDisarray from './Components/CubicDisarray';
-import TriangularMesh from './TriangularMesh';
+import TriangularMesh from './Components/TriangularMesh';
+import UnDeuxTrois from './Components/UnDeuxTrois';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
      <JoyDivision />
      <CubicDisarray />
      <TriangularMesh />
+     <UnDeuxTrois />
     </div>
   );
 }

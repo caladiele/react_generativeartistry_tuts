@@ -1,4 +1,6 @@
 import {useRef, useEffect} from 'react';
+import { randomColor } from '../Utils/GetColors';
+
 
 const TiledLines = () => {
 
