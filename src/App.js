@@ -8,6 +8,7 @@ import TriangularMesh from './Components/TriangularMesh';
 import UnDeuxTrois from './Components/UnDeuxTrois';
 import CirclePacking from './Components/CirclePacking';
 import HypnoticSquares  from './Components/HypnoticSquares';
+import PietMondrian from './Components/PietMondrian';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
      <UnDeuxTrois />
      <CirclePacking />
      <HypnoticSquares />
+     <PietMondrian />
     </div>
   );
 }

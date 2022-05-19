@@ -1,18 +1,17 @@
 import {useRef, useEffect} from 'react';
+import { floorRandom } from '../Utils/MathFunction';
 
 const HypnoticSquares = () => {
 
     const canvasRef = useRef(null);
-
     
-    const draw = (ctx, x, y, width, height, xMov, yMov, startSize, startSteps, finalSize, steps, offset, tileStep, directions) => { 
+    const draw = (ctx, x, y, width, height, xMov, yMov, startSize, startSteps, finalSize, steps) => { 
         ctx.beginPath();
         ctx.rect(x, y, width, height);
         ctx.stroke();
         
         ctx.closePath();
         if (steps >= 0) {
-            console.log(steps);
             let newSize = (startSize) * (steps / startSteps) + finalSize;
             let newX = x + (width - newSize) / 2;
             let newY = y + (height - newSize) / 2;
@@ -42,7 +41,14 @@ const HypnoticSquares = () => {
         context.scale(dpr, dpr);
         context.lineWidth = 2;
 
-        draw(context, 0, 0, startSize, startSize, 1, 1, startSize, startSteps, finalSize, startSteps, offset);
+        for (let x = offset; x < size - offset; x += tileStep) {
+            for (let y = offset; y < size - offset; y += tileStep) {
+                startSteps = 2 + Math.ceil(Math.random() * 3);
+                let xDir = directions[floorRandom(directions.length)];
+                let yDir = directions[floorRandom(directions.length)];
+                draw(context, x, y, startSize, startSize, xDir, yDir, startSize, startSteps, finalSize, startSteps);
+            }
+        }
 
     }, [draw]);
 
