@@ -12,24 +12,22 @@ const PietMondrian = () => {
         
         for (let i = 0; i < numOfColoredSquares; i++) {
             squares[Math.floor(Math.random() * squares.length)].colors = getPastelColor();
-            console.log(true);
-
         } 
 
         for (let i = 0; i < squares.length; i++) {
-            const square = squares[i];
             ctx.beginPath();
             ctx.rect(
-                square.x,
-                square.y,
-                square.width,
-                square.height
+                squares[i].x,
+                squares[i].y,
+                squares[i].width,
+                squares[i].height
             );
-            if(squares[i].color) {
-                ctx.fillStyle = "#000000";
+            if(squares[i].colors) {
+                ctx.fillStyle = squares[i].colors;
             } else {
                 ctx.fillStyle = '#FFFFFF';
             }
+            console.log(ctx.fillStyle);
             ctx.fill();
             ctx.stroke();    
             ctx.closePath();
@@ -41,13 +39,17 @@ const PietMondrian = () => {
         for (let i = squares.length - 1; i >= 0; i--) {
             const square = squares[i];
             if (x && x > square.x && x < square.x + square.width) {
-                squares.splice(i, 1);
-                splitOnX(square, x);
+                if (Math.random() > 0.5) {
+                    squares.splice(i, 1);
+                    splitOnX(square, x);
+                }
             }
             
             if (y && y > square.y && y < square.y + square.height) {
-                squares.splice(i, 1);
-                splitOnY(square, y);
+                if (Math.random() > 0.5) {
+                    squares.splice(i, 1);
+                    splitOnY(square, y);
+                }
             }
 
         }
@@ -100,19 +102,20 @@ const PietMondrian = () => {
         context.scale(dpr, dpr);
         context.lineWidth = 8;
 
-        let step = size / 6;
-
-        for (let i = 0; i < size; i += step) {
-            slitSquaresWith({ y: i });
-            slitSquaresWith({ x: i })
-        }
-
+        let step = size / 7;
+        
         squares.push({
             x: 0,
             y: 0,
             width: size,
             height: size
         });
+
+        for (let i = 0; i < size; i += step) {
+            slitSquaresWith({ y: i });
+            slitSquaresWith({ x: i })
+        }
+
 
         draw(context, squares)
         

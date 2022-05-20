@@ -9,6 +9,7 @@ import UnDeuxTrois from './Components/UnDeuxTrois';
 import CirclePacking from './Components/CirclePacking';
 import HypnoticSquares  from './Components/HypnoticSquares';
 import PietMondrian from './Components/PietMondrian';
+import HoursOfDark from './Components/HoursOfDark';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
      <CirclePacking />
      <HypnoticSquares />
      <PietMondrian />
+     <HoursOfDark />
     </div>
   );
 }
