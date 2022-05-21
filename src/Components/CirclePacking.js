@@ -1,6 +1,8 @@
 import {useRef, useEffect} from 'react';
 import { floorRandom } from '../Utils/MathFunction';
 
+// --> OG Tutorial at https://generativeartistry.com/tutorials/circle-packing/
+
 const CirclePacking = () => {
 
     const canvasRef = useRef(null);
@@ -39,8 +41,6 @@ const CirclePacking = () => {
         circles.push(newCircle);
 
         ctx.beginPath();
-        // --> Canvas Arc() Method arg 
-        // --> x coord · y coord · radius · starting angle in radians · ending angle in radians
         ctx.arc(newCircle.x, newCircle.y, newCircle.radius, 0, 2 * Math.PI);
         ctx.stroke();
 
@@ -89,7 +89,7 @@ const CirclePacking = () => {
             draw(context, size, minRadius, maxRadius, createCircleAttemps);
         }
 
-    }, [draw]);
+    });
 
     return <canvas ref={canvasRef} width="600" height="600"/>
 }

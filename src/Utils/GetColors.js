@@ -4,6 +4,6 @@ export const getPastelColor = () => {
     (75 + 10 * Math.random()) + '%)'
 }
 
-export let randomColor =() => {
+export let randomColor = () => {
     return Math.floor(Math.random() * 16777215).toString(16);
 }
