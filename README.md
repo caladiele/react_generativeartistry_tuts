@@ -5,23 +5,23 @@ Simple project created for fun and for the purpose of learning <canvas>.
 ## Tutorials series
 
 ### Tiled Lines
-[https://generativeartistry.com/tutorials/tiled-lines/](Tiled Lines)
+[Tiled Lines](https://generativeartistry.com/tutorials/tiled-lines/)
 ### Joy Division
-[https://generativeartistry.com/tutorials/joy-division/](Joy Division)
+[Joy Division](https://generativeartistry.com/tutorials/joy-division/)
 ### Cubic Disarray
-[https://generativeartistry.com/tutorials/cubic-disarray/](Cubic Disarray)
+[Cubic Disarray](https://generativeartistry.com/tutorials/cubic-disarray/)
 ### Triangular Mesh
-[https://generativeartistry.com/tutorials/triangular-mesh/](Triangular Mesh)
+[Triangular Mesh](https://generativeartistry.com/tutorials/triangular-mesh/)
 ### Un Deux Trois
-[https://generativeartistry.com/tutorials/un-deux-trois/](Un Deux Trois)
+[Un Deux Trois](https://generativeartistry.com/tutorials/un-deux-trois/)
 ### Circle Packing
-[https://generativeartistry.com/tutorials/circle-packing/](Circle Packing)
+[Circle Packing](https://generativeartistry.com/tutorials/circle-packing/)
 ### Hypnotic Squares
-[https://generativeartistry.com/tutorials/hypnotic-squares/](Hypnotic Squares)
+[Hypnotic Squares](https://generativeartistry.com/tutorials/hypnotic-squares/)
 ### Piet Mondrian
-[https://generativeartistry.com/tutorials/piet-mondrian/](Piet Mondrian)
+[Piet Mondrian](https://generativeartistry.com/tutorials/piet-mondrian/)
 ### Hours of Dark
-[https://generativeartistry.com/tutorials/hours-of-dark/](Hours of Dark)
+[Hours of Dark](https://generativeartistry.com/tutorials/hours-of-dark/)
 
 ## How to use it
 
